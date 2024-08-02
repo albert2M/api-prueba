@@ -44,7 +44,7 @@ class PageComponent extends HTMLElement {
   }
 
   async loadPage (filename) {
-    const response = await fetch(`./pages/${filename}`)
+    const response = await fetch(`${this.basePath}/pages/${filename}`)
     const html = await response.text()
 
     document.startViewTransition(() => {
